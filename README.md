@@ -1,5 +1,8 @@
 # CodeFellowship
 
+#Presentation Template
+https://docs.google.com/presentation/d/1NeXKKEpjK2DDme8EwlZBsJndUqIgGYzWrY6FAYtNTf0/edit?usp=sharing
+
 TEAM AGREEMENT
 Cooperation
 What are the key strengths of each person on the team?
