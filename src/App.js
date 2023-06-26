@@ -1,17 +1,25 @@
 import React from 'react';
-// import Header from './Header';
-// import Footer from './Footer';
+import Header from './Header';
+import Footer from './Footer';
 import './App.css';
+import Story from './Story';
+import Profile from './About';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
     <>
-        {/* <Router>
+        <Router>
           <Header />
           <Routes>
             <Route 
               exact path="/"
-              element={<BestStories />}
+              element={<Story />}
             >
             </Route>
             <Route
@@ -22,7 +30,7 @@ function App() {
             </Route>
           </Routes>
           <Footer />
-        </Router> */}
+        </Router>
     </>
   );
 }
