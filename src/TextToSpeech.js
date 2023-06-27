@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-// const TextToSpeech = ({ text })- originally stores text in object
+
 const TextToSpeech = ({text}) => {
   const [isPaused, setIsPaused] = useState(false);
   const [utterance, setUtterance] = useState(null);
