@@ -17,44 +17,47 @@ class Story extends React.Component {
     }
   }
 
-  // handleOpenModal = () => {
-  //   this.setState({
-  //     showModal: true
-  //   })
-  // }
+  handleOpenModal = () => {
+    this.setState({
+      showModal: true
+    })
+  }
 
-  // handleCloseModal = () => {
-  //   this.setState({
-  //     showModal: false
-  //   })
-  // }
+  handleCloseModal = () => {
+    this.setState({
+      showModal: false
+    })
+  }
 
-  // handleOpenUpdateModal = (storyToUpdate) => {
-  //   this.setState({
-  //     showUpdateModal: true,
-  //     storyToUpdate: storyToUpdate
-  //   })
-  // }
+  handleOpenUpdateModal = (storyToUpdate) => {
+    this.setState({
+      showUpdateModal: true,
+      storyToUpdate: storyToUpdate
+    })
+  }
 
-  // handleCloseUpdateModal = () => {
-  //   this.setState({
-  //     showUpdateModal: false,
-  //     storyToUpdate:{}
-  //   })
-  // }
+  handleCloseUpdateModal = () => {
+    this.setState({
+      showUpdateModal: false,
+      storyToUpdate:{}
+    })
+  }
   
   // getAllStories = async () => {
-  //   try {
-  //     let url = `${process.env.REACT_APP_SERVER}/stories`
 
-  //     let storiesFromDB = await axios.get(url);
-
-  //     this.setState({
-  //       stories: storiesFromDB.data
-  //     })
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
+  //   if (this.props.auth0.isAuthenticated) {
+  //     try {
+  //       let url = `${process.env.REACT_APP_SERVER}/stories`
+  
+  //       // let storiesFromDB = await axios.get(url);
+  
+  //       this.setState({
+  //         stories: storiesFromDB.data
+  //       })
+  //     } catch (error) {
+  //       console.log(error.message);
+  //     }
+  //   } 
   // }
 
   // componentDidMount(){
@@ -119,4 +122,3 @@ class Story extends React.Component {
 }
 
 export default Story;
-
