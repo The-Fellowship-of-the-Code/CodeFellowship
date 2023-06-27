@@ -4,7 +4,8 @@ import './Story.css';
 import { Button, Accordion } from 'react-bootstrap/';
 import StoryForm from './StoryForm';
 import JournalEntry from './JournalEntry'
-import banner from './img/banner.jpeg'
+import banner from './img/banner.jpeg';
+import TextToSpeech from './TextToSpeech';
 
 class Story extends React.Component {
   constructor(props) {
@@ -101,6 +102,8 @@ class Story extends React.Component {
     }
   }
 
+
+
   render() {
 
     return (
@@ -141,6 +144,7 @@ class Story extends React.Component {
                   Date: {story.date} <br />
                   Journal Entry: {story.entry}
                   </p>
+                  <TextToSpeech text={story.content}></TextToSpeech>
                   <Button className="update-btn" variant="success" onClick={()=> this.handleOpenUpdateModal(story)}>Change Title/Add a note</Button>
                   <Button variant="danger" onClick={()=> this.deleteStory(story._id)}>Delete Story</Button>
                 </Accordion.Body>
