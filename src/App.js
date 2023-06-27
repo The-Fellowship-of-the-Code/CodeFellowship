@@ -3,7 +3,9 @@ import Header from './Header';
 import Footer from './Footer';
 import './App.css';
 import Story from './Story';
-import Profile from './About';
+// import Profile from './Profile';
+// import Login from './Login';
+// import Logout from './Logout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
@@ -11,10 +13,13 @@ import {
   Route
 } from "react-router-dom";
 
+
 function App() {
   return (
     <>
         <Router>
+          {/* <Login />
+          <Logout />  */}
           <Header />
           <Routes>
             <Route 
@@ -24,7 +29,7 @@ function App() {
             </Route>
             <Route
               exact path="/about"
-              element = {<Profile />}
+              // element = {<Profile />}
             >
 
             </Route>
