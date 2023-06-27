@@ -1,8 +1,8 @@
 import React from 'react';
 // import axios from 'axios';
 import './Story.css';
-// import { Button, Accordion } from 'react-bootstrap/';
-// import AddStory from './AddStory';
+import { Button } from 'react-bootstrap/';
+import StoryForm from './StoryForm';
 // import UpdateStory from './UpdateStory'
 
 
@@ -85,12 +85,15 @@ class Story extends React.Component {
 
     return (
       <>
-        <h2>My Stories &amp; Formation Shelf</h2>
+        <h2>DreamWell Stories</h2>
 
-        {/* <Button variant = 'primary' onClick = {this.handleOpenModal}>Add A Story</Button>
+        <Button variant = 'primary' onClick = {this.handleOpenModal}>Add A Story</Button>
 
-        <AddStory getAllStories = {this.getAllStories} show = {this.state.showModal} handleClose = {this.handleCloseModal}/>
-        <UpdateStory getAllStories={this.getAllStories} showModal={this.state.showUpdateModal} closeUpdateModal={this.handleCloseUpdateModal} storyToUpdate={this.state.storyToUpdate}/>
+        <StoryForm 
+        // getAllStories = {this.getAllStories} 
+        show = {this.state.showModal} 
+        handleCloseModal = {this.handleCloseModal}/>
+        {/* <UpdateStory getAllStories={this.getAllStories} showModal={this.state.showUpdateModal} closeUpdateModal={this.handleCloseUpdateModal} storyToUpdate={this.state.storyToUpdate}/>
 
         {this.state.stories.length ? (
           <>
@@ -114,8 +117,8 @@ class Story extends React.Component {
           </div>
           </>
             ) : (
-          <h3>No Stories Found 🙁</h3> */}
-        {/* )} */}
+          <h3>No Stories Found 🙁</h3>
+         )} */}
       </>
     )
   }
