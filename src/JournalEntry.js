@@ -17,9 +17,6 @@ class JournalEntry extends React.Component {
     this.props.putStory(storyToUpdate);
   }
 
-  // handleCloseModal = () => {
-  //   this.props.handleCloseUpdateModal();
-  // }
 
   render() {
     return (
@@ -35,14 +32,12 @@ class JournalEntry extends React.Component {
             <Form.Group controlId="title" >
               <Form.Label>Change Title</Form.Label>
               <Form.Control type="text"/>
-              {/* <Form.Control type="text" defaultValue={this.props.bookToUpdate.title} /> */}
             </Form.Group>
             <Form.Group controlId="entry" >
               <Form.Label>Your thoughts</Form.Label>
               <Form.Control type="text"/>
-              {/* <Form.Control type="text" defaultValue={this.props.bookToUpdate.description} /> */}
             </Form.Group>
-            <Button type="submit" onClick={this.handleCloseModal} >Add my entry</Button>
+            <Button type="submit" onClick={this.props.handleCloseUpdateModal} >Add my entry</Button>
           </Form>
         </Modal >
       </>

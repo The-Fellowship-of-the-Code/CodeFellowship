@@ -38,7 +38,6 @@ class Story extends React.Component {
   handleCloseUpdateModal = () => {
     this.setState({
       showUpdateModal: false,
-      storyToUpdate:{}
     })
   }
   
@@ -102,7 +101,7 @@ class Story extends React.Component {
   }
 
   render() {
-console.log(this.state.stories, 'here I am');
+
     return (
       <>
         <h2>DreamWell Stories</h2>
