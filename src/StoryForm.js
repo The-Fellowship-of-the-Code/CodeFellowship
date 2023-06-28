@@ -12,7 +12,7 @@ class StoryForm extends React.Component {
       setting: event.target.setting.value
     }
     this.props.handleCloseModal();
-    // this.props.postStory(storyObj);
+    this.props.postStory(storyObj);
     console.log(storyObj);
   }
 

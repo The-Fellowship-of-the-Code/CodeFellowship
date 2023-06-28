@@ -62,6 +62,15 @@ class Story extends React.Component {
     this.getAllStories();
   }
 
+  postStory = async (x) => {
+  try {
+    await axios.post(`${process.env.REACT_APP_SERVER}/stories`, x);
+    this.getAllStories();
+  } catch (error){
+    console.log(error.message);
+  }
+}
+
   deleteStory = async (id) => {
     try {
       let url = `${process.env.REACT_APP_SERVER}/stories/${id}`;
@@ -93,7 +102,7 @@ class Story extends React.Component {
   }
 
   render() {
-
+console.log(this.state.stories, 'here I am');
     return (
       <>
         <h2>DreamWell Stories</h2>
@@ -102,8 +111,10 @@ class Story extends React.Component {
 
         <StoryForm 
         show = {this.state.showModal} 
-        handleCloseModal = {this.handleCloseModal}/>
-        
+        handleCloseModal = {this.handleCloseModal}
+        postStory = {this.postStory}
+        />
+
         <JournalEntry 
           getAllStories={this.getAllStories} 
           showUpdateModal={this.state.showUpdateModal} 
