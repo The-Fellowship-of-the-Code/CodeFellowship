@@ -3,7 +3,6 @@ import Header from './Header';
 import Footer from './Footer';
 import './App.css';
 import Story from './Story';
-import Profile from './Profile';
 import Login from './Login';
 import Logout from './Logout';
 import About from './About';
@@ -22,7 +21,7 @@ function App() {
           <Header />
           <Login />
           <Logout />
-          <Profile className="profile" />
+          
           <Routes>
             <Route 
               exact path="/"
