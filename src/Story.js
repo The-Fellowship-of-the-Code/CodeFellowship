@@ -1,10 +1,9 @@
 import React from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import './Story.css';
-import { Button } from 'react-bootstrap/';
+import { Button, Accordion } from 'react-bootstrap/';
 import StoryForm from './StoryForm';
-// import UpdateStory from './UpdateStory'
-
+import JournalEntry from './JournalEntry'
 
 class Story extends React.Component {
   constructor(props) {
@@ -43,43 +42,55 @@ class Story extends React.Component {
     })
   }
   
-  // getAllStories = async () => {
+  getAllStories = async () => {
 
-  //   if (this.props.auth0.isAuthenticated) {
-  //     try {
-  //       let url = `${process.env.REACT_APP_SERVER}/stories`
+    // if (this.props.auth0.isAuthenticated) {
+      try {
+        let url = `${process.env.REACT_APP_SERVER}/stories`
+        let storiesFromDB = await axios.get(url);
   
-  //       // let storiesFromDB = await axios.get(url);
-  
-  //       this.setState({
-  //         stories: storiesFromDB.data
-  //       })
-  //     } catch (error) {
-  //       console.log(error.message);
-  //     }
-  //   } 
-  // }
+        this.setState({
+          stories: storiesFromDB.data
+        })
+      } catch (error) {
+        console.log(error.message);
+      }
+    // } 
+  }
 
-  // componentDidMount(){
-  //   this.getAllStories();
-  // }
+  componentDidMount(){
+    this.getAllStories();
+  }
 
-  
-  // deleteStory = async (id) => {
-  //   try {
-  //     let url = `${process.env.REACT_APP_SERVER}/stories/${id}`;
-  //     await axios.delete(url);
+  deleteStory = async (id) => {
+    try {
+      let url = `${process.env.REACT_APP_SERVER}/stories/${id}`;
+      await axios.delete(url);
+      let updatedStories = this.state.stories.filter(story => story._id !== id);
+      this.setState({
+        stories: updatedStories
+      })
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
 
-  //     let updatedStories = this.state.stories.filter(story => story._id !== id);
-
-  //     this.setState({
-  //       stories: updatedStories
-  //     })
-      
-  //   } catch (error) {
-  //     console.log(error.message);
-  //   }
-  // }
+  putStory = async (storyToUpdate) => {
+    try {
+      let url = `${process.env.REACT_APP_SERVER}/stories/${storyToUpdate._id}`
+      let updateStoryFromAxios = await axios.put(url, storyToUpdate);
+      let updatedStoryArray = this.state.stories.map(existingStory => {
+        return existingStory._id === storyToUpdate._id
+        ? updateStoryFromAxios.data
+        : existingStory
+      })
+      this.setState({
+        stories: updatedStoryArray
+      })
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
 
   render() {
 
@@ -90,38 +101,59 @@ class Story extends React.Component {
         <Button variant = 'primary' onClick = {this.handleOpenModal}>Add A Story</Button>
 
         <StoryForm 
-        // getAllStories = {this.getAllStories} 
         show = {this.state.showModal} 
         handleCloseModal = {this.handleCloseModal}/>
-        {/* <UpdateStory getAllStories={this.getAllStories} showModal={this.state.showUpdateModal} closeUpdateModal={this.handleCloseUpdateModal} storyToUpdate={this.state.storyToUpdate}/>
+        
+        <JournalEntry 
+          getAllStories={this.getAllStories} 
+          showUpdateModal={this.state.showUpdateModal} 
+          handleCloseUpdateModal={this.handleCloseUpdateModal} 
+          storyToUpdate={this.state.storyToUpdate}
+          putStory={this.putStory}/>
+          
 
         {this.state.stories.length ? (
           <>
-          <div className="accordion-container">
             <div className="accordion-wrapper">
-              <Accordion>
+            <Accordion>
+            {/* <Accordion striped bordered hover> */}
             {this.state.stories.map( (story)=>(
               <Accordion.Item key={story._id}>
-                <img className="d-block w-50" src={story.imageUrl || 'https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60'} alt={story.title} />
-                <Accordion.Caption>
-                  <h3>{story.title}</h3>
-                  <p>Description: {story.description} <br />
-                  Status: {story.status}</p>
+                <Accordion.Header>
+                <h3>{story.title}</h3>
+                </Accordion.Header>
+                <Accordion.Body>
+                  <p>
+                  Here is your story: {story.content} <br />
+                  Date: {story.date} <br />
+                  Journal Entry: {story.entry}
+                  </p>
                   <Button variant="danger" onClick={()=> this.deleteStory(story._id)}>Delete Story</Button>
-                  <Button variant="success" onClick={()=> this.handleOpenUpdateModal(story)}>Update Story</Button>
-                </Accordion.Caption>
+                  <Button variant="success" onClick={()=> this.handleOpenUpdateModal(story)}>Add a note</Button>
+                </Accordion.Body>
               </Accordion.Item>
             ))}
           </Accordion>
             </div>
-          </div>
           </>
             ) : (
           <h3>No Stories Found 🙁</h3>
-         )} */}
+         )}
       </>
     )
   }
 }
+
+
+
+            // {
+            //   this.props.itemsList.map((item, idx) =>
+            //     <Item 
+            //     key={item._id} 
+            //     itemData={item} 
+            //     handleDelete={this.props.handleDelete}/>
+            //   )
+            // }
+
 
 export default Story;

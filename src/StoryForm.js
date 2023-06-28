@@ -2,8 +2,6 @@ import React from "react";
 import { Button, Modal, Form } from 'react-bootstrap';
 
 class StoryForm extends React.Component {
-
-
   handleStorySubmit = (event) => {
     event.preventDefault();
     let storyObj = {
@@ -18,13 +16,11 @@ class StoryForm extends React.Component {
     console.log(storyObj);
   }
 
-
-
   render() {
     return (
       <>
 
-        <Modal show={this.props.show} onHide={this.props.handleClose}>
+        <Modal show={this.props.show} onHide={this.props.handleCloseModal}>
           <Modal.Header closeButton>
             <Modal.Title>Create a Story</Modal.Title>
           </Modal.Header>
@@ -57,13 +53,6 @@ class StoryForm extends React.Component {
       </>
     );
   }
-
-
-
-
-
-
-
 
 }
 
