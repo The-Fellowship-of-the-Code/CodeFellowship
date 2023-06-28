@@ -6,6 +6,7 @@ import Story from './Story';
 import Profile from './Profile';
 import Login from './Login';
 import Logout from './Logout';
+import About from './About';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
@@ -21,6 +22,7 @@ function App() {
           <Login />
           <Logout /> 
           <Header />
+          <Profile />
           <Routes>
             <Route 
               exact path="/"
@@ -29,7 +31,7 @@ function App() {
             </Route>
             <Route
               exact path="/about"
-              element = {<Profile />}
+              element = {<About />}
             >
 
             </Route>
