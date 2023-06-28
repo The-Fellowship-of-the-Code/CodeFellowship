@@ -1,13 +1,12 @@
 import React from 'react';
-// import Navbar from 'react-bootstrap/Navbar';
+import Navbar from 'react-bootstrap/Navbar';
 
 class Footer extends React.Component {
   render() {
     return (
-      console.log('footer')
-      // <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      //   <Navbar.Brand></Navbar.Brand>
-      // </Navbar>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar.Brand> The Fellowship of the Code &#169;</Navbar.Brand>
+      </Navbar>
     )
   }
 }
