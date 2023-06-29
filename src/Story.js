@@ -4,7 +4,6 @@ import './Story.css';
 import { Button, Accordion } from 'react-bootstrap/';
 import StoryForm from './StoryForm';
 import JournalEntry from './JournalEntry'
-import banner from './img/banner.jpeg'
 
 class Story extends React.Component {
   constructor(props) {
@@ -105,7 +104,7 @@ class Story extends React.Component {
 
     return (
       <>
-        <div className='banner' style={{backgroundImage: `url(${banner})`}}>
+        <div className='banner'>
           <div className='title-text'>
             <h2 className='title'>DreamWell Stories 🌙 </h2>
           </div>

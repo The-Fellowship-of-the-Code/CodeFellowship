@@ -3,9 +3,9 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
-import wasim from './img/wasim2.png'
+import wasim from './img/wasim.png'
 import ryan from './img/ryan.png'
-import rocio from './img/rocio2.png'
+import rocio from './img/rocio.png'
 import tojot from './img/tojot.jpg'
 import './About.css'
 
