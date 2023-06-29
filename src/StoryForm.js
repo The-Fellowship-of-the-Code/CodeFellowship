@@ -31,22 +31,22 @@ class StoryForm extends React.Component {
                 <Form.Control type="text" />
               </Form.Group>
               <Form.Group controlId="age">
-                <Form.Label>Age</Form.Label>
+                <Form.Label>Your Age</Form.Label>
                 <Form.Control type="text" />
               </Form.Group>
               <Form.Group controlId="mainChar">
-                <Form.Label>Main Character</Form.Label>
+                <Form.Label>Main Character of Story</Form.Label>
                 <Form.Control type="text" />
               </Form.Group>
               <Form.Group controlId="problem">
-                <Form.Label>Problem</Form.Label>
+                <Form.Label>Problem/Conflict</Form.Label>
                 <Form.Control type="text" />
               </Form.Group>
               <Form.Group controlId="setting">
                 <Form.Label>Setting/Location</Form.Label>
                 <Form.Control type="text" />
               </Form.Group>
-              <Button type="submit">Create</Button>
+              <Button type="submit">Create!</Button>
             </Form>
           </Modal.Body>
         </Modal>
