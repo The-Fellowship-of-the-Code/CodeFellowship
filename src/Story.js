@@ -4,6 +4,7 @@ import './Story.css';
 import { Button, Accordion } from 'react-bootstrap/';
 import StoryForm from './StoryForm';
 import JournalEntry from './JournalEntry'
+import banner from './img/banner.jpeg'
 
 class Story extends React.Component {
   constructor(props) {
@@ -104,10 +105,12 @@ class Story extends React.Component {
 
     return (
       <>
-        <h2>DreamWell Stories</h2>
-
-        <Button variant = 'primary' onClick = {this.handleOpenModal}>Add A Story</Button>
-
+        <div className='banner' style={{backgroundImage: `url(${banner})`}}>
+          <div className='title-text'>
+            <h2 className='title'>DreamWell Stories 🌙 </h2>
+          </div>
+          <Button className='create-btn' variant = 'primary' onClick = {this.handleOpenModal}>Create a Story</Button>
+        </div>
         <StoryForm 
         show = {this.state.showModal} 
         handleCloseModal = {this.handleCloseModal}
@@ -132,14 +135,14 @@ class Story extends React.Component {
                 <Accordion.Header>
                 <h3>{story.title}</h3>
                 </Accordion.Header>
-                <Accordion.Body>
+                <Accordion.Body className='accordion-body'>
                   <p>
                   Here is your story: {story.content} <br />
                   Date: {story.date} <br />
                   Journal Entry: {story.entry}
                   </p>
+                  <Button className="update-btn" variant="success" onClick={()=> this.handleOpenUpdateModal(story)}>Change Title/Add a note</Button>
                   <Button variant="danger" onClick={()=> this.deleteStory(story._id)}>Delete Story</Button>
-                  <Button variant="success" onClick={()=> this.handleOpenUpdateModal(story)}>Add a note</Button>
                 </Accordion.Body>
               </Accordion.Item>
             ))}

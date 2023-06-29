@@ -1,20 +1,47 @@
 import { Component } from "react";
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import Row from 'react-bootstrap/Row';
+import wasim from './img/wasim2.png'
+import ryan from './img/ryan.png'
+import rocio from './img/rocio2.png'
+import tojot from './img/tojot.jpg'
+import './About.css'
+
 
 class About extends Component {
 
   render() {
     /* TODO: render information about the developers */
     return (
-
-      <>
-        <h2>ChristianRhey Tojot</h2>
-        <p>ChristianRhey is from some place and has these interests.  To be completed later.</p>
-        <h2>Rocio Martinez</h2>
-        <p>Rocio is from some place and has these interests.  To be completed later.</p>
-        <h2>Wasim Soomro</h2>
-        <p>Wasim is from some place and has these interests.  To be completed later.</p>
-        <p>Ryan is from some place and has these interests.  To be completed later.</p>
-      </>
+      <div className="body">
+        <h2>Meet Our Team</h2>
+        <Container className="profile-container">
+          <Row className="row">
+            <Col  xs={6} md={3}>
+              <Image className="wasim-img" src={wasim} roundedCircle />
+              <h4> <b>Wasim Soomro</b> </h4>
+              <p class="mb-0">Software Developer</p>
+            </Col>
+            <Col xs={6} md={3}>
+              <Image className="ryan-img" src={ryan} roundedCircle />
+              <h4> <b>Ryan Gosselin</b> </h4>
+              <p class="mb-0">Software Developer</p>
+            </Col>
+            <Col xs={6} md={3}>
+              <Image className="rocio-img" src={rocio} roundedCircle />
+              <h4> <b>Rocio Martinez</b> </h4>
+              <p class="mb-0">Software Developer</p>
+            </Col>
+            <Col xs={6} md={3}>
+              <Image className="christianrhey-img" src={tojot} roundedCircle />
+              <h4> <b>ChristianRhey Tojot</b> </h4>
+              <p class="mb-0">Software Developer</p>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     )
   }
 };

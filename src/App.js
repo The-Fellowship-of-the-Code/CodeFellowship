@@ -19,9 +19,9 @@ function App() {
   return (
     <>
         <Router>
+          <Header />
           <Login />
           <Logout /> 
-          <Header />
           <Profile />
           <Routes>
             <Route 
