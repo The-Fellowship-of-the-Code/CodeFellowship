@@ -21,7 +21,7 @@ function App() {
         <Router>
           <Header />
           <Login />
-          <Logout /> 
+          <Logout />
           <Profile />
           <Routes>
             <Route 
