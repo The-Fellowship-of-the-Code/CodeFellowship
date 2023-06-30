@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import './App.css';
+import './css/App.css';
 import Story from './Story';
 import Profile from './Profile';
 import Login from './Login';
