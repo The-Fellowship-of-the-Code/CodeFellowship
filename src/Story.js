@@ -4,6 +4,8 @@ import './Story.css';
 import { Button, Accordion } from 'react-bootstrap/';
 import StoryForm from './StoryForm';
 import JournalEntry from './JournalEntry'
+import TextToSpeech from './TextToSpeech';
+
 
 class Story extends React.Component {
   constructor(props) {
@@ -42,8 +44,6 @@ class Story extends React.Component {
   }
   
   getAllStories = async () => {
-
-    // if (this.props.auth0.isAuthenticated) {
       try {
         let url = `${process.env.REACT_APP_SERVER}/stories`
         let storiesFromDB = await axios.get(url);
@@ -54,7 +54,7 @@ class Story extends React.Component {
       } catch (error) {
         console.log(error.message);
       }
-    // } 
+    
   }
 
   componentDidMount(){
@@ -100,6 +100,8 @@ class Story extends React.Component {
     }
   }
 
+
+
   render() {
 
     return (
@@ -128,7 +130,6 @@ class Story extends React.Component {
           <>
             <div className="accordion-wrapper">
             <Accordion>
-            {/* <Accordion striped bordered hover> */}
             {this.state.stories.map( (story)=>(
               <Accordion.Item key={story._id}>
                 <Accordion.Header>
@@ -140,6 +141,7 @@ class Story extends React.Component {
                   Date: {story.date} <br />
                   Journal Entry: {story.entry}
                   </p>
+                  <TextToSpeech text={story.content}></TextToSpeech>
                   <Button className="update-btn" variant="success" onClick={()=> this.handleOpenUpdateModal(story)}>Change Title/Add a note</Button>
                   <Button variant="danger" onClick={()=> this.deleteStory(story._id)}>Delete Story</Button>
                 </Accordion.Body>
@@ -156,16 +158,6 @@ class Story extends React.Component {
   }
 }
 
-
-
-            // {
-            //   this.props.itemsList.map((item, idx) =>
-            //     <Item 
-            //     key={item._id} 
-            //     itemData={item} 
-            //     handleDelete={this.props.handleDelete}/>
-            //   )
-            // }
 
 
 export default Story;
