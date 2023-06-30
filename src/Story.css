@@ -8,7 +8,7 @@
 
 .banner {
     width: 100%;
-    height: 200px;
+    height: 220px;
     background-image: url('./img/bannerFixed.jpg');
     background-size: cover;
     background-position: center;
@@ -43,4 +43,9 @@
 .accordion-body {
     margin: 15px;
 }
+.profile-box {
+    position: absolute;
+    left: 1750px;
+    justify-content: end;
+  }
 

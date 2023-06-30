@@ -5,6 +5,7 @@ import { Button, Accordion } from 'react-bootstrap/';
 import StoryForm from './StoryForm';
 import JournalEntry from './JournalEntry'
 import TextToSpeech from './TextToSpeech';
+import Profile from './Profile';
 
 
 class Story extends React.Component {
@@ -106,6 +107,7 @@ class Story extends React.Component {
 
     return (
       <>
+          <Profile/>
         <div className='banner'>
           <div className='title-text'>
             <h2 className='app-title'>DreamWell Stories 🌙 </h2>

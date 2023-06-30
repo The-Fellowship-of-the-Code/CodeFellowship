@@ -20,6 +20,8 @@ Update feature, user can rename the title of the story Get
 
 [Presentation](https://docs.google.com/presentation/d/171dnphTU40D8I7mEntc1ukNiGmq3WdOue1H8zaT_r9o/edit#slide=id.g2accd1c413_3_31)
 
+[Lighthouse Report](img/lighthouse.png)
+
 ### Resources/Collaborators
 
 [Iconify](https://icon-sets.iconify.design/)
