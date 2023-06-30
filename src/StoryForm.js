@@ -13,7 +13,6 @@ class StoryForm extends React.Component {
     }
     this.props.handleCloseModal();
     this.props.postStory(storyObj);
-    console.log(storyObj);
   }
 
   render() {
