@@ -16,7 +16,7 @@ class About extends Component {
     /* TODO: render information about the developers */
     return (
       <div className="body">
-        <h2>Meet Our Team</h2>
+        <h2 className="teamHeader">Meet Our Team</h2>
         <Container className="profile-container">
           <Row className="row">
             <Col  xs={6} md={3}>
