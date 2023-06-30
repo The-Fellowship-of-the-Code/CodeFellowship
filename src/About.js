@@ -7,7 +7,7 @@ import wasim from './img/wasim2.png'
 import ryan from './img/ryan.png'
 import rocio from './img/rocio2.png'
 import tojot from './img/tojot.jpg'
-import './css/About.css'
+import './About.css'
 
 
 class About extends Component {

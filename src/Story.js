@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import './css/Story.css';
+import './Story.css';
 import { Button, Accordion } from 'react-bootstrap/';
 import StoryForm from './StoryForm';
 import JournalEntry from './JournalEntry'
