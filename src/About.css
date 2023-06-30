@@ -29,7 +29,10 @@
 
 .row {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-around;    
 }
 
+.teamHeader {
+    clear: both;
+    margin-top: 45px;
+}

@@ -7,7 +7,7 @@ class Footer extends React.Component {
     return (                  
           <Navbar className="d-flex align-items-center justify-content-center sticky-bottom" collapseOnSelect expand="lg" bg="dark" data-bs-theme="dark">
             <Navbar.Brand> The Fellowship of the Code &#169;</Navbar.Brand>
-          </Navbar>               
+          </Navbar>            
     )
   }
 }
