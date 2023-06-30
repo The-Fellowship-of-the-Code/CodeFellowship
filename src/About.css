@@ -1,33 +1,85 @@
-
-
-.wasim-img {
-    max-height: 200px;
-    max-width: 200px;
+.title {
+    text-shadow: 2px 2px 5px #000;
+    text-align: center;
 }
 
-.ryan-img {
-    max-height: 200px;
-    max-width: 200px;
+#about .member {
+    transition: all 2s;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+    overflow: visible;
+    display: inline-block;
+    justify-content: space-between;
 }
 
-.rocio-img {
-    max-height: 200px;
-    max-width: 200px;
+#about img {
+    border-radius: 15px;
+    border-color: black;
 }
 
-.christianrhey-img {
-    max-height: 200px;
-    max-width: 200px;
+#about .description {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(8,61,119);
+    transform: translateY(-100%) rotateY(180deg);
+    border-radius: 15px;
+    transition: all 2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.profile-container {
-    width: 900px;
-    height: auto;
-    padding-top: 50px;
-    padding-bottom: 200px;
+
+#about .description {
+    backface-visibility: hidden !important;
 }
 
-.row {
+#about .member:hover {
+    transform :rotateY(180deg);
+}
+
+#about .description h1 {
+    color: #fff;
+}
+
+
+#about .description h2 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: rgba(228,171,223,1);
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 0;
+}
+
+#about .description p {
+    color: #fff;
+    text-align: justify;
+    padding: 0 15px;
+}
+
+#about .description  svg {
+    color: #fff;
+    font-size: 35px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#about .description .social-media svg:hover {
+    transform: scale(1.1);
+    color: #F21B3F;
+}
+
+.member {
+    height: 400px;
+    display: flex;
+    padding: 15px;
+    padding-top: 30px;
+}
+/* .row {
     display: flex;
     justify-content: space-around;    
 }
@@ -35,4 +87,4 @@
 .teamHeader {
     clear: both;
     margin-top: 45px;
-}
+} */
