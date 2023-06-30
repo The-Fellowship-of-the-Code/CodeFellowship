@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "@iconify/react": "^4.1.1",
     "react-router-dom": "^6.14.0"
   }
 }
