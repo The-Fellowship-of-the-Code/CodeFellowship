@@ -10,8 +10,7 @@ import './About.css'
 export default function About () {
   return (
     <div id='about'>
-        <h1 className='title'>Meet Our Team</h1>
-        <div className="divider"></div>
+        <h1 className='title'>Meet Our Team!</h1>
         <div className="members">
           <div className="member">
             <img width={400} alt='wasim' src={wasim}/>
@@ -19,11 +18,15 @@ export default function About () {
                 <h1>Wasim Soomro</h1>
                 <h2>Software Developer</h2>
                 <p>
-                Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum dolor sit amet consectet.
+                Hi! I'm a transitioning Air Force cyberspace operations officer with  intelligence community leadership and network operations, major incident management and cyber defense experience.
                 </p>
                 <div className="social-media">
+                <a href="https://www.linkedin.com/in/wasimws/">
                 <Icon icon="devicon:linkedin" />
+                </a>
+                <a href="https://github.com/WasimSoomro">
                 <Icon icon="bi:github" />
+                </a>
                 </div>
             </div>
           </div>
@@ -33,11 +36,15 @@ export default function About () {
                 <h1>Ryan Gosselin</h1>
                 <h2>Software Developer</h2>
                 <p>
-                Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum dolor sit amet consectet.
+                Well-rounded IT Leader with a demonstrated history of communications project management. Progressing towards mobile application development, with JAVA.
                 </p>
                 <div className="social-media">
+                <a href="https://www.linkedin.com/in/ryan-gosselin2/">
                 <Icon icon="devicon:linkedin" />
+                </a>
+                <a href="https://github.com/Gozz3230">
                 <Icon icon="bi:github" />
+                </a>
                 </div>
             </div>
           </div>
@@ -47,11 +54,15 @@ export default function About () {
                 <h1>Rocio Martinez</h1>
                 <h2>Software Developer</h2>
                 <p>
-                Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum dolor sit amet consectet.
+                From New Mexico, enjoys reading and hiking on her spare time.  Formerly worked as a biomedical technician in the military. Excited about the possibilities of working in tech now.
                 </p>
                 <div className="social-media">
+                <a href="https://www.linkedin.com/in/rociocmartinez/">
                 <Icon icon="devicon:linkedin" />
+                </a>
+                <a href="https://github.com/RocioCMartinez">
                 <Icon icon="bi:github" />
+                </a>
                 </div>
             </div>
           </div>
@@ -61,11 +72,15 @@ export default function About () {
                 <h1>ChristianRhey Tojot</h1>
                 <h2>Software Developer</h2>
                 <p>
-                Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat. Lorem ipsum dolor sit amet consectet.
+                Hello! I am from Bothell, WA. I am currently enrolled in Code Fellows. I have previous experience in IT. The goal is to become a software developer and I'm looking to go into developing video games.
                 </p>
                 <div className="social-media">
+                <a href="https://www.linkedin.com/in/christianrheytojot/">
                 <Icon icon="devicon:linkedin" />
+                </a>
+                <a href="https://github.com/ctojot">
                 <Icon icon="bi:github" />
+                </a>
                 </div>
             </div>
           </div>

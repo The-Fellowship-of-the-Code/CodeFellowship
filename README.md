@@ -20,6 +20,16 @@ Update feature, user can rename the title of the story Get
 
 [Presentation](https://docs.google.com/presentation/d/171dnphTU40D8I7mEntc1ukNiGmq3WdOue1H8zaT_r9o/edit#slide=id.g2accd1c413_3_31)
 
+### Resources/Collaborators
+
+[Iconify](https://icon-sets.iconify.design/)
+[Ahmed Ghanim 'About Us Template'](https://ahmed-ghanim.com/)
+[Text-to-Speech](https://edvins.io/react-text-to-speech)
+[React Boostrap Components](https://react-bootstrap.netlify.app/)
+[Chat GPT](https://openai.com/blog/chatgpt)
+[W3Schools](https://www.w3schools.com/css/default.asp)
+[Authenticaion](https://auth0.com/)
+
 ### TEAM AGREEMENT
 
 Cooperation
