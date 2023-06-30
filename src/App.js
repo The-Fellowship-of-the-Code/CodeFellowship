@@ -22,7 +22,7 @@ function App() {
           <Header />
           <Login />
           <Logout />
-          <Profile />
+          <Profile className="profile" />
           <Routes>
             <Route 
               exact path="/"

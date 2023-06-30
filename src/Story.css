@@ -1,6 +1,9 @@
-.title {
+.app-title {
+    font-size: 65px;
     color: white;
-    
+    text-shadow: 2px 2px 5px #000;
+    text-align: center;
+    clear: both;
 }
 
 .banner {
@@ -13,14 +16,14 @@
 
 }
 
-.title {
-    font-size: 65px;
-}
 
 .title-text {
-    padding-top: 55px;
+    padding-top: 60px;
     text-align: center;
     text-shadow: 2px 2px 5px #000;
+    color: white;
+    clear: both;
+    font-size: 65px;
 }
 
 .create-btn {

@@ -108,7 +108,7 @@ class Story extends React.Component {
       <>
         <div className='banner'>
           <div className='title-text'>
-            <h2 className='title'>DreamWell Stories 🌙 </h2>
+            <h2 className='app-title'>DreamWell Stories 🌙 </h2>
           </div>
           <Button className='create-btn' variant = 'primary' onClick = {this.handleOpenModal}>Create a Story</Button>
         </div>
@@ -142,7 +142,7 @@ class Story extends React.Component {
                   Journal Entry: {story.entry}
                   </p>
                   <TextToSpeech text={story.content}></TextToSpeech>
-                  <Button className="update-btn" variant="success" onClick={()=> this.handleOpenUpdateModal(story)}>Change Title/Add a note</Button>
+                  <Button className="update-btn" variant="warning" onClick={()=> this.handleOpenUpdateModal(story)}>Change Title/Add a Note</Button>
                   <Button variant="danger" onClick={()=> this.deleteStory(story._id)}>Delete Story</Button>
                 </Accordion.Body>
               </Accordion.Item>

@@ -26,8 +26,9 @@ class JournalEntry extends React.Component {
           onHide={this.props.handleCloseUpdateModal}
         >
           <Modal.Header closeButton>
-            <Modal.Title>Add your thoughts on this story.</Modal.Title>
+            <Modal.Title>Add Your Thoughts On This Story</Modal.Title>
           </Modal.Header>
+          <Modal.Body>
           <Form onSubmit={this.handleJournalEntry}>
             <Form.Group controlId="title" >
               <Form.Label>Change Title</Form.Label>
@@ -37,8 +38,9 @@ class JournalEntry extends React.Component {
               <Form.Label>Your thoughts</Form.Label>
               <Form.Control type="text"/>
             </Form.Group>
-            <Button type="submit" onClick={this.props.handleCloseUpdateModal} >Add my entry</Button>
+            <Button type="submit" onClick={this.props.handleCloseUpdateModal} >Change Title or Add Journal Entry</Button>
           </Form>
+          </Modal.Body>
         </Modal >
       </>
     )
