@@ -1,0 +1,31 @@
+/* DO NOT DELETE SPACER UNLESS YOU FIX THE DARK BACKGROUND SPACING WITHOUT IT */
+.spacer {   
+    color: orange; opacity: 0;    
+}
+
+.brand {    
+    font-size:xx-large;
+    color: white;
+    position: absolute;    
+    top: 50%;
+    left: 155px;
+    transform: translate(-50%, -50%);  
+}
+
+.home-link {    
+    font-size: x-large;
+    position: absolute;
+    top: 50%;
+    right: 200px;
+    transform: translate(-50%, -50%);        
+}
+
+.about-link {    
+    font-size: x-large;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(-50%, -50%);
+    
+}
+

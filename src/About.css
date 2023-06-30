@@ -46,6 +46,7 @@
     transform :rotateY(180deg);
 }
 
+
 #about .description h1
 {
     color: #fff;
@@ -90,3 +91,13 @@
     padding: 15px;
     padding-top: 30px;
 }
+/* .row {
+    display: flex;
+    justify-content: space-around;    
+}
+
+.teamHeader {
+    clear: both;
+    margin-top: 45px;
+
+} */
